@@ -7,4 +7,5 @@ if (SWIG_FOUND)
 
     add_subdirectory(python)
     add_subdirectory(java)
+    add_subdirectory(go)
 endif(SWIG_FOUND)
