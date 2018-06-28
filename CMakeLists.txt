@@ -7,6 +7,7 @@ project(djswig)
 cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
 
 set(CMAKE_CXX_STANDARD 14)
+set (CMAKE_POSITION_INDEPENDENT_CODE TRUE)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules)
 
 include(cmake/jsmnpp/libjsmn.cmake)
@@ -30,7 +31,7 @@ target_include_directories(djswig PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/>
 )
 
-target_link_libraries(djswig PUBLIC ${Boost_LIBRARIES} ${HDF5_LIBRARIES})
+target_link_libraries(djswig PUBLIC libjsmn)
 
 ###########################################################################
 # DIRS
