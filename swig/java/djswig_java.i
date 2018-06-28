@@ -3,14 +3,14 @@
 %include "std_string.i"
 
 %{
-    #include "jsmn.h"
+    #include "jsmn.hpp"
     #include "djswig.h"
 
-    extern std::string toJson();
-    extern int fromJson(const std::string &str) noexcept;
+    extern std::string serializeJson(jsmn::Object jsmnObject);
+    extern jsmn::Object fromJson(const std::string &jsonFile);
     extern void djSwigHelloWorld();    
 %}
 
-extern std::string toJson();
-extern int fromJson(const std::string &str) noexcept;
+extern std::string serializeJson(jsmn::Object jsmnObject);
+extern jsmn::Object fromJson(const std::string &jsonFile);
 extern void djSwigHelloWorld();
