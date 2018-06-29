@@ -6,6 +6,8 @@
 #include <string>
 #include <exception>
 
+using namespace std;
+
 namespace jsmn {
 
 using std::map;
